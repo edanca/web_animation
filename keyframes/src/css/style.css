@@ -1,0 +1,48 @@
+body {
+  padding: 50px; }
+
+.box {
+  display: inline-block;
+  background: lightblue;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  -webkit-animation-name: myframes;
+  animation-name: myframes;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+  .box.is-paused {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused; }
+
+@-webkit-keyframes myframes {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes myframes {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }

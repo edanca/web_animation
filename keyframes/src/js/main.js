@@ -1,0 +1,1 @@
+window.onload=function(){document.addEventListener("click",function(){var e=document.getElementsByTagName("body")[0],t=document.createElement("div");t.setAttribute("class","box");var d=document.createTextNode("Card");t.appendChild(d),e.appendChild(t)})};

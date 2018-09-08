@@ -1,0 +1,37 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    // Parent container to snap
+    // scroll-snap-type: y mandatory;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+}
+
+section {
+    padding: 7em;
+    height: calc(100vh - 14em);
+    width: calc(100% - 14em);
+    color: white;
+    // child need specify snap
+    scroll-snap-align: start;
+
+    &:nth-of-type(1) {
+        background: rgb(96, 175, 21);
+    }
+    &:nth-of-type(2) {
+        background: rgb(21, 139, 175);
+    }
+    &:nth-of-type(3) {
+        background: rgb(175, 21, 129);
+    }
+
+    h3 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}

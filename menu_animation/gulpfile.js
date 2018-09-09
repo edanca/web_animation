@@ -1,10 +1,10 @@
 const gulp          = require('gulp')
+const browserSync   = require('browser-sync')
 const sass          = require('gulp-sass')
 const autoPrefixer  = require('gulp-autoprefixer')
 const uglify        = require('gulp-uglify')
-const browserSync   = require('browser-sync')
 
-// Compile SASS and live browser
+// Compile Sass and injecto into browser
 gulp.task('sass', function() {
     return gulp.src(['src/sass/*.sass'])
         .pipe(sass())
@@ -12,7 +12,7 @@ gulp.task('sass', function() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('src/css'))
+        .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream())
 })
 
@@ -23,17 +23,17 @@ gulp.task('compress', function() {
         .pipe(gulp.dest('src/js'))
 })
 
-// Monitor SASS changes
-gulp.task('monitor', ['sass', 'compress'], function() {
+// Monitor sass changes
+gulp.task('monitor', ['sass','compress'], function() {
     browserSync.init({
-        server: './src',
+        server: "./src",
         browser: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
     })
     gulp.watch(['src/sass/*.sass'], ['sass'])
-    gulp.watch(['src/*.html']).on('change', browserSync.reload)
-    gulp.watch(['src/prejs/*.js'], ['compress']).on('change', browserSync.reload)
+    gulp.watch(["src/*.html"]).on('change', browserSync.reload)
+    gulp.watch(["src/prejs/*.js"], ['compress']).on('change', browserSync.reload)
 })
 
 
-// DEFAULT TASK
-gulp.task('default', ['monitor', 'compress'])
+// Default Task
+gulp.task('default', ['monitor'])

@@ -1,0 +1,82 @@
+body {
+  padding: 50px;
+  color: black; }
+
+.trigger {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #999;
+  background: #ddd;
+  border-radius: 50%; }
+
+.box {
+  display: inline-block;
+  background: yellow;
+  width: 200px;
+  height: 200px;
+  font-size: 3em;
+  border-radius: inherit;
+  color: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0, 0.47, 0.32, 1.97);
+  transition: -webkit-transform 500ms cubic-bezier(0, 0.47, 0.32, 1.97);
+  transition: transform 500ms cubic-bezier(0, 0.47, 0.32, 1.97);
+  transition: transform 500ms cubic-bezier(0, 0.47, 0.32, 1.97), -webkit-transform 500ms cubic-bezier(0, 0.47, 0.32, 1.97);
+  pointer-events: none; }
+
+.trigger.clicked .box {
+  -webkit-transform: translate(200px, 150px) rotate(20deg);
+  transform: translate(200px, 150px) rotate(20deg); }
+
+.img.clicked img {
+  -webkit-animation-name: dance;
+  animation-name: dance;
+  -webkit-animation-duration: 900ms;
+  animation-duration: 900ms;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes dance {
+  0% {
+    -webkit-transform: rotate(10deg) translateX(30px);
+    transform: rotate(10deg) translateX(30px); }
+  50% {
+    -webkit-transform: rotate(-10deg) translateX(-30px);
+    transform: rotate(-10deg) translateX(-30px); }
+  100% {
+    -webkit-transform: rotate(10deg) translateX(30px);
+    transform: rotate(10deg) translateX(30px); }
+  50% {
+    -webkit-transform: rotate(-10deg) translateX(-30px);
+    transform: rotate(-10deg) translateX(-30px); }
+  0% {
+    -webkit-transform: rotate(10deg) translateX(30px);
+    transform: rotate(10deg) translateX(30px); } }
+
+@keyframes dance {
+  0% {
+    -webkit-transform: rotate(10deg) translateX(30px);
+    transform: rotate(10deg) translateX(30px); }
+  50% {
+    -webkit-transform: rotate(-10deg) translateX(-30px);
+    transform: rotate(-10deg) translateX(-30px); }
+  100% {
+    -webkit-transform: rotate(10deg) translateX(30px);
+    transform: rotate(10deg) translateX(30px); }
+  50% {
+    -webkit-transform: rotate(-10deg) translateX(-30px);
+    transform: rotate(-10deg) translateX(-30px); }
+  0% {
+    -webkit-transform: rotate(10deg) translateX(30px);
+    transform: rotate(10deg) translateX(30px); } }

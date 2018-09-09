@@ -1,0 +1,50 @@
+body
+  padding: 50px
+  color: rgba(0,0,0,7)
+ 
+.trigger
+  width: 200px
+  height: 200px
+  border: 3px solid #999
+  background: #ddd
+  border-radius: 50%
+
+.box
+  display: inline-block
+  background: yellow
+  width: 200px
+  height: 200px
+  font-size: 3em
+  border-radius: inherit
+  color: orange
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  transition: transform 500ms cubic-bezier(0, 0.47, 0.32, 1.97)
+  pointer-events: none
+  
+.trigger.clicked .box
+  transform: translate(200px, 150px) rotate(20deg)
+
+  
+.img.clicked img
+  animation:
+    name: dance
+    duration: 900ms
+    timing-function: linear
+    iteration-count: infinite
+  
+  
+@keyframes dance
+  0%
+    transform: rotate(10deg) translateX(30px)
+  50%
+    transform: rotate(-10deg) translateX(-30px)
+  100%
+    transform: rotate(10deg) translateX(30px)
+  50%
+    transform: rotate(-10deg) translateX(-30px)
+  0%
+    transform: rotate(10deg) translateX(30px)
+  
